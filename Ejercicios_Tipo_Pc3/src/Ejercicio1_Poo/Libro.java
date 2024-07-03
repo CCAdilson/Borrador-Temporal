@@ -1,0 +1,79 @@
+
+package Ejercicio1_Poo;
+
+public class Libro {
+    
+    private String titulo;
+    private String autor;
+    private int añoPublicacion;
+    private String genero;
+    private int numeroPaginas;
+
+    public Libro(String titulo, String autor, int añoPublicacion, String genero, int numeroPaginas) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.añoPublicacion = añoPublicacion;
+        this.genero = genero;
+        this.numeroPaginas = numeroPaginas;
+    }
+    
+    @Override
+    public String toString(){
+        return "\nTitulo: "+titulo+
+                "\nAutor: "+autor+
+                "\nAño de publicacion: "+añoPublicacion+""
+                + "\nGenero: "+genero+
+                "\nNumero de paginas: "+numeroPaginas;
+    }
+    
+    public String clasificacionEdad(){
+        if(numeroPaginas < 100){
+            return "Infantil";
+        }else if(numeroPaginas >= 100 && numeroPaginas <= 300){
+            return "Juvenil";
+        }else{
+            return "adulto";
+        }
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public int getAñoPublicacion() {
+        return añoPublicacion;
+    }
+
+    public void setAñoPublicacion(int añoPublicacion) {
+        this.añoPublicacion = añoPublicacion;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public int getNumeroPaginas() {
+        return numeroPaginas;
+    }
+
+    public void setNumeroPaginas(int numeroPaginas) {
+        this.numeroPaginas = numeroPaginas;
+    }
+
+}
